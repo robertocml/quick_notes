@@ -7,6 +7,10 @@ function saveNote() {
     var noteItem = document.createElement("li");
     noteItem.appendChild(document.createTextNode(noteText));
     noteList.appendChild(noteItem);
+
+    var separator = document.createElement("hr");
+    noteList.appendChild(separator);
+
     noteInput.value = "";
   }
 }
@@ -60,10 +64,14 @@ document.querySelector('[data-tab="notesTab"]').addEventListener('click', functi
   openTab('notesTab');
 });
 
-
 document.querySelector('[data-tab="tasksTab"]').addEventListener('click', function() {
   openTab('tasksTab');
 });
 
 document.getElementById('SaveNoteBtn').addEventListener('click', saveNote);
 document.getElementById('AddTaskBtn').addEventListener('click', addTask);
+
+window.addEventListener('load', function() {
+  openTab('notesTab');
+});
+

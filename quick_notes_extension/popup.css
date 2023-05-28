@@ -1,5 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 400px !important;
+  height: 500px !important;
+}
+
+
 .tabs {
   overflow: hidden;
+  height: 20px; /* Ajusta esta altura según tus necesidades */
+  padding: 10px;
 }
 
 .tablinks {
@@ -19,7 +29,7 @@
   display: none;
   padding: 16px;
   border: 1px solid #ccc;
-  width: 500px;
+  height: 500px !important;
 }
 
 textarea {
@@ -47,15 +57,6 @@ button {
 }
 
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.tabs {
-  height: 20px; /* Ajusta esta altura según tus necesidades */
-  padding: 10px;
-}
 
 #task-list {
   display: none;
