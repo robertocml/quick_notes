@@ -55,3 +55,15 @@ function openTab(tabName) {
   }
 }
 
+
+document.querySelector('[data-tab="notesTab"]').addEventListener('click', function() {
+  openTab('notesTab');
+});
+
+
+document.querySelector('[data-tab="tasksTab"]').addEventListener('click', function() {
+  openTab('tasksTab');
+});
+
+document.getElementById('SaveNoteBtn').addEventListener('click', saveNote);
+document.getElementById('AddTaskBtn').addEventListener('click', addTask);

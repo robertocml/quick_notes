@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <title>Quick Notes</title>
   <link rel="stylesheet" type="text/css" href="popup.css">
-  <script src="popup.js"></script>
+  
 </head>
 <body style="width: 400px; height: 300px;">
   <div class="tabs">
-    <button class="tablinks" onclick="openTab('notesTab')" id="notesTab-link">Add New Note</button>
-    <button class="tablinks" onclick="openTab('tasksTab')" id="tasksTab-link">Add New Task</button>
+    <button class="tablinks" data-tab="notesTab" id="notesTab-link">Add New Note</button>
+    <button class="tablinks" data-tab="tasksTab" id="tasksTab-link">Add New Task</button>
     
   </div>
 
   <div id="notesTab" class="tabcontent">
     <textarea id="note-input"></textarea>
-    <button onclick="saveNote()">Save</button>
+    <button id="SaveNoteBtn">Save</button>
     <ul id="note-list"></ul>
   </div>
 
   <div id="tasksTab" class="tabcontent">
     <input type="text" id="task-input">
-    <button onclick="addTask()">Add</button>
+    <button id="AddTaskBtn">Add</button>
     <ul id="task-list"></ul>
   </div>
 </body>
+<script src="popup.js"></script>
 </html>
